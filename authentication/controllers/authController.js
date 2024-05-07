@@ -1,8 +1,3 @@
-/* const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function (data) { this.users = data }
-}
-*/
 const { user } = require("../db_connect");
 const bcrypt = require("bcrypt");
 
@@ -16,7 +11,7 @@ const handleLogin = async (req, res) => {
   if (!identifier || !password)
     return res
       .status(400)
-      .json({ message: "Username/email and password are required." });
+      .json({ message: "Username or email and password are required." });
 
   try {
     // find by username or email

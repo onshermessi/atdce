@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Redirect from "./Redirect";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,7 @@ const LoginForm = () => {
     password: "",
   });
   const [error, setError] = useState("");
+  const [redirect, setRedirect] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,20 +17,18 @@ const LoginForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "https://localhost:3500/login",
-        formData
-      );
-
+      const response = await axios.post("http://localhost:3500/auth", formData);
+      console.log("Response:", response);
       if (response && response.data && response.data.accessToken) {
         //login: success => store acessToken in local storage
         localStorage.setItem("accessToken", response.data.accessToken);
-        //hezni f dashboard
-        window.location.href = "/dashboard";
+        console.log("Yuo're logged in !");
+        setRedirect("/dashboard");
       } else {
         setError("Invalid credentials. Please try again.");
       }
     } catch (err) {
+      console.error("Error:", err);
       if (err.response && err.response.status === 401) {
         setError("Invalid credentials. Please try again");
       } else if (
@@ -43,6 +43,9 @@ const LoginForm = () => {
     }
   };
 
+  if (redirect) {
+    return <Redirect to={redirect} />;
+  }
   return (
     <div>
       {error && <p>{error}</p>}
