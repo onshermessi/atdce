@@ -22,13 +22,20 @@ const user = sequelize.define("user", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  isVerified: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+  },
+  emailToken: {
+    type: DataTypes.STRING,
+  },
   refreshToken: {
     type: DataTypes.STRING,
   },
 });
 
 sequelize
-  .sync({ force: true })
+  .sync({})
   .then(() => {
     console.log("Database synced successfully!");
   })
