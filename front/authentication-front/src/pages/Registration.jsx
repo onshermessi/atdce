@@ -8,6 +8,7 @@ const RegistrationForm = () => {
     password: "",
   });
   const [error, setError] = useState("");
+  const [registrationStatus, setRegistrationStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,8 +26,9 @@ const RegistrationForm = () => {
 
       if (response.status === 201) {
         // if user registering first time => go dashboard
-        window.location.href = "/dashboard";
+        // window.location.href = "/dashboard";
       }
+      setRegistrationStatus("success");
     } catch (err) {
       console.log(err.response.data);
       if (err.response && err.response.status === 409) {
@@ -50,8 +52,20 @@ const RegistrationForm = () => {
       } else {
         setError("An error has occurred. Please try again later.");
       }
+      setRegistrationStatus("error");
     }
   };
+  //jdid
+  let statusMessage = null;
+  if (registrationStatus === "success") {
+    statusMessage = (
+      <div>
+        Registration successful! Please check your email to verify your account.
+      </div>
+    );
+  } else if (registrationStatus === "error") {
+    statusMessage = <div>Failed to register. Please try again.</div>;
+  } //nheb nahi hedha lkol o yjini fi page wahadha
 
   return (
     <div>
@@ -65,6 +79,7 @@ const RegistrationForm = () => {
             name="username"
             value={formData.username}
             onChange={handleChange}
+            placeholder="Enter your username"
           />
         </div>
         <div>
@@ -74,6 +89,7 @@ const RegistrationForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            placeholder="Enter your email"
           />
         </div>
         <div>
@@ -83,9 +99,11 @@ const RegistrationForm = () => {
             name="password"
             value={formData.password}
             onChange={handleChange}
+            placeholder="Enter your password"
           />
         </div>
         <button type="submit">Register</button>
+        {statusMessage}
       </form>
     </div>
   );
