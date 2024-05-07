@@ -7,12 +7,30 @@ const RegistrationForm = () => {
     email: "",
     password: "",
   });
+
+  // const [title, setTitle] = useState;
   const [error, setError] = useState("");
   const [registrationStatus, setRegistrationStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  //jdid
+  let statusMessage = null;
+  if (registrationStatus === "success") {
+    statusMessage = (
+      <div>
+        Registration successful! Please check your email to verify your account.
+      </div>
+    );
+  } else {
+    console.log("Something went wrong");
+  }
+
+  /*else if (registrationStatus === "error") {
+    statusMessage = <div>Failed to register. Please try again.</div>;
+  } //nheb nahi hedha lkol o yjini fi page wahadha */
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +47,10 @@ const RegistrationForm = () => {
         // window.location.href = "/dashboard";
       }
       setRegistrationStatus("success");
+      setError("");
+      setTimeout(() => {
+        setRegistrationStatus(null);
+      }, 3000);
     } catch (err) {
       console.log(err.response.data);
       if (err.response && err.response.status === 409) {
@@ -55,21 +77,9 @@ const RegistrationForm = () => {
       setRegistrationStatus("error");
     }
   };
-  //jdid
-  let statusMessage = null;
-  if (registrationStatus === "success") {
-    statusMessage = (
-      <div>
-        Registration successful! Please check your email to verify your account.
-      </div>
-    );
-  } else if (registrationStatus === "error") {
-    statusMessage = <div>Failed to register. Please try again.</div>;
-  } //nheb nahi hedha lkol o yjini fi page wahadha
 
   return (
     <div>
-      <h2>Registration</h2>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div>
@@ -79,7 +89,7 @@ const RegistrationForm = () => {
             name="username"
             value={formData.username}
             onChange={handleChange}
-            placeholder="Enter your username"
+            placeholder="Username"
           />
         </div>
         <div>
@@ -89,7 +99,7 @@ const RegistrationForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Enter your email"
+            placeholder="Email"
           />
         </div>
         <div>
@@ -99,7 +109,7 @@ const RegistrationForm = () => {
             name="password"
             value={formData.password}
             onChange={handleChange}
-            placeholder="Enter your password"
+            placeholder="Password"
           />
         </div>
         <button type="submit">Register</button>

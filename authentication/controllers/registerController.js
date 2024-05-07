@@ -14,15 +14,15 @@ const createToken = (userId) => {
 const transporter = nodemailer.createTransport({
   service: "outlook",
   auth: {
-    user: "ons.hermessi@hotmail.com",
-    pass: "ons9589ons",
+    user: "",
+    pass: "",
   },
 });
 const sendVerificationEmail = async (email, token) => {
   //send email verif link
   const verificationLink = `https://localhost:3500/verify/{token}`; //hotha baad
   await transporter.sendMail({
-    from: "ons.hermessi@hotmail.com",
+    from: "",
     to: email, // receiver
     subject: "Email Verification",
     html: `Click <a href="${verificationLink}">here</a> to verify your email.`,
