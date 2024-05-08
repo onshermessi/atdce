@@ -4,19 +4,21 @@ import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
 import CombinedLoginSignUpPage from "./pages/CombinedLogInSignUpPage";
 import Dashboard from "./pages/DashboardPage";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <Router>
-      <div>
+      <>
+        <Navbar />
         <Routes>
-          <Route path="/" element={<LoginPage />} />
+          <Route path="/" exact />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/registration" element={<SignUpPage />} />
           <Route path="/login-signup" element={<CombinedLoginSignUpPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
-      </div>
+      </>
       ;
     </Router>
   );
