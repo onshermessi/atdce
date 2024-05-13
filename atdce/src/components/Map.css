@@ -1,0 +1,62 @@
+.where-we-are {
+    margin: 70px;
+    z-index: 1;
+    position: relative;
+    height: 600px;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  
+  .conti, .tounes {
+    position: absolute;
+    top: 0;
+    width: 75%;
+    height: auto;
+    transition: opacity 0.4s;
+  }
+  
+  .conti {
+    padding-top: 8px;
+  }
+  
+  .tounes {
+    height: auto;
+    width: 88px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .tounes-container {
+    margin-right: 142px;
+  }
+  
+  .dropped-opacity {
+    opacity: 0.9;
+  }
+.pop-up {
+    transform: scale(1.04);
+}
+
+.tounes:hover {
+    transform: scale(1.04);
+}
+.tounes:not(:hover) {
+    transform: scale(1);
+}
+
+.tounes-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 5px 10px;
+    display: none;
+}
+
+.tounes-container:hover .tounes-text {
+    display: block;
+}

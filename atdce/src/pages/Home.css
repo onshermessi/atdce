@@ -1,0 +1,67 @@
+.events-imgs {
+    background-color: #22211F;
+    margin-top: -185px;
+    padding-top: 240px;
+    padding-bottom: 100px;
+    margin-bottom: -60px;
+    height: 260px;
+}
+
+.img-set {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 190px;
+}
+
+.img {
+    height: 400px;
+    width: auto;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 170px;
+    width: 100vw;
+}
+
+h2 {
+    font-family: "Poppins";
+    font-size: 35px;
+    color: #22211F;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.img-sec-1-div {
+    height: 400px;
+    width: auto;
+    border-radius: 20px;
+}
+
+.img-sec-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.img-sec-2-div {
+    padding: 0 12px;
+    height: 409px;
+    width: auto;
+}
+
+.partner-vid {
+    background-color: #22211F;
+    height: 507px;
+    margin-bottom:50px
+}
+
+.ellipse-div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: -50px;
+}

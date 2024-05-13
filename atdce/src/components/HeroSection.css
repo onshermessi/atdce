@@ -1,0 +1,126 @@
+.hero-grad {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(255, 0, 0, 0.1), white);
+    background-size: 100% 150px;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.herosection-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 190px;
+    font-family: 'poppins';
+    line-height: 30px;
+    padding-top: 20px;
+    
+
+}
+.herosection-top {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 6px solid #22211F;
+    padding-top: 5px;
+    align-items:center ;
+    padding-bottom: 31px;
+}
+
+.herosection-top-left {
+    display: flex;
+    flex-direction: column;
+   justify-content: flex-start;
+   height: auto;
+    flex:1;
+    line-height: 25px;
+}
+.herosection-top-left h3 {
+    font-size: 20px;
+    font-weight: 450;
+    margin-top: -5px;
+}
+
+.herosection-top-left p {
+    font-size: 18px;
+    margin-top: 0px;
+}
+.herosection-top-left h2 {
+font-size: 35px;
+font-family: 'Playfair Display';
+color: #22211F;
+}
+.herosection-top-left h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.herosection-top-right {
+    padding-top: 50px;
+    flex: 1;
+}
+.herosection-top-right img {
+    height: 530px;
+  padding-left: 70px;
+margin-top: 51
+px;
+  display: flex;
+  align-self: baseline;
+  
+}
+.hero-numbers {
+    background-color: #22211F;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+    color: white;
+    font-family: 'Playfair Display';
+    padding-right: 30px;
+margin-top: 10px;}
+
+.hero-numbers p {
+    font-size: 60px;
+    font-weight: 600;
+    padding-top: 60px;
+    margin-bottom: 30px;
+}
+
+.hero-titles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+}
+
+
+.hero-titles p {
+    color: #22211F;
+    font-size: 29px;
+    font-weight:600;
+    margin-top: 25px;
+}
+.herosection-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 6px solid #22211F; 
+}
+.img-cont {
+    position: relative;
+}
+.img-text{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+color: white;
+text-align: left;
+font-size: 35px;
+line-height: 35px;
+}
+
+.herosection-bottom img {
+    height: 400px;
+    margin-bottom: -11px;
+    margin-top: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
