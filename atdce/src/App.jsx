@@ -8,9 +8,10 @@ import Footer from "./components/Footer.jsx";
 
 import Home from "./pages/Home.jsx";
 import Events from "./pages/Events.jsx";
+import Projects from "./pages/Projects.jsx";
 {
   /*
-import Projects from "./pages/Projects.jsx";
+
 import PartnersFunds from "./pages/PartnerFunds.jsx";
 import ImpactArea from "./pages/ImpactArea.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
@@ -28,8 +29,8 @@ export default function App() {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="events" element={<Events />} />
+            <Route path="projects" element={<Projects />} />
             {/*
-          <Route path="projects" element={<Projects />} />
           <Route path="partnersandfunds" element={<PartnersFunds />} />
           <Route path="impactareas" element={<ImpactArea />} />
           <Route path="aboutus" element={<AboutUs />} />

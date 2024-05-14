@@ -111,7 +111,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
     margin: 0 240px;
 }
 
@@ -127,3 +126,127 @@
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
+
+.page-content2 {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+.date-filter-container {
+    position: relative;
+    height: 30px;
+    margin-bottom: 40px;
+    padding-top: 18px;
+  }
+  
+
+  .line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #22211F;
+    transform: translateY(-50%);
+  }
+  
+  .dot {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  .dates {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .date {
+    position: absolute;
+    bottom: -20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .join-us-banner {
+    position: relative;
+    width: 100%;
+  }
+
+  .join-us-banner img {
+    width: 100%;
+    height: auto;
+  }
+
+  .join-us-banner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    line-height: 24px;
+  }
+  
+  .btm-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 300px;
+    position: relative;
+  }
+
+  .img-group1, .img-group2 {
+    position: relative;
+    margin-top: 80px;
+  }
+
+  .img-group1 img, .img-group2 img {
+    position: absolute;
+  }
+
+  .img-group1 img:nth-child(1), .img-group2 img:nth-child(1) {
+    top: 0;
+    left:0;
+  }
+  .img-group1 img:nth-child(2), .img-group2 img:nth-child(2) {
+    bottom: 0px;
+    left:0;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-content3 {
+    margin: 0 350px;
+  }
+  hr {
+    height: 3px;
+    background-color: #22211F;
+    margin-top: 50px;
+  }
+
+  .page-btm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .socials, .btp {
+    display: flex;
+    flex-direction: row;
+  }
