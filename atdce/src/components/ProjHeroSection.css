@@ -18,8 +18,8 @@
 
 .proj-img {
     position: relative;
-    height: auto;
-    width: 320px;
+    height: 350px;
+    width: 350px;
     align-self: center;
     z-index: 1;
 }

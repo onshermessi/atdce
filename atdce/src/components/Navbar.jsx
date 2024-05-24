@@ -9,14 +9,25 @@ import { IoClose, IoMenu } from "react-icons/io5";
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
 
+  const [showDropdown, setShowDropdown] = useState(false);
+
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+    if (!showMenu) {
+      setShowDropdown(false);
+    }
   };
   const closeMenuOnMobile = () => {
     if (window.innerWidth <= 1150) {
       setShowMenu(false);
+      setShowDropdown(false);
     }
   };
+
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
   return (
     <header>
       <div className="containernav">
@@ -50,13 +61,32 @@ export default function Navbar() {
                     </Link>
                   </li>
                   <li className="nav__item">
-                    <Link
-                      to="/projects"
-                      className="nav-link"
-                      onClick={closeMenuOnMobile}
-                    >
+                    <div className="nav-link" onClick={toggleDropdown}>
                       Projects
-                    </Link>
+                    </div>
+                    <div className={`dropdown ${showDropdown ? "show" : ""}`}>
+                      <Link
+                        to="/project1"
+                        className="dropdown-item"
+                        onClick={closeMenuOnMobile}
+                      >
+                        Project1
+                      </Link>
+                      <Link
+                        to="/project2"
+                        className="dropdown-item"
+                        onClick={closeMenuOnMobile}
+                      >
+                        Project2
+                      </Link>
+                      <Link
+                        to="/project3"
+                        className="dropdown-item"
+                        onClick={closeMenuOnMobile}
+                      >
+                        Project3
+                      </Link>
+                    </div>
                   </li>
                   <li className="nav__item">
                     <Link
