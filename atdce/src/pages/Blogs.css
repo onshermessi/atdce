@@ -1,0 +1,51 @@
+.b-container {
+    display: flex;
+    flex-direction: row;
+    margin: 40px 180px;
+    font-size: 14px;
+}
+
+.b-container-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.b-container-1-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+
+}
+
+.b-container-1-sec img {
+    height: 250px;
+    width: 250px;
+   
+}
+
+.b-container-1-sec-t {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.b-img-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.b-img-set img {
+    padding: 10px;  
+    width: 350px;
+}
+
+.b-container-2 {
+    padding-left: 80px;
+}

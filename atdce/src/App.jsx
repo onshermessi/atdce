@@ -14,12 +14,9 @@ import Project3 from "./pages/Project3.jsx";
 import ImpactArea from "./pages/ImpactArea.jsx";
 import PartnersFunds from "./pages/PartnerFunds.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
-{
-  /*
 import PartnerWithUs from "./pages/PartnerWithUs.jsx";
 import Careers from "./pages/Careers.jsx";
-import Blogs from "./pages/Blogs.jsx"; */
-}
+import Blogs from "./pages/Blogs.jsx";
 
 export default function App() {
   return (
@@ -36,10 +33,9 @@ export default function App() {
             <Route path="impactareas" element={<ImpactArea />} />
             <Route path="partnersandfunds" element={<PartnersFunds />} />
             <Route path="aboutus" element={<AboutUs />} />
-            {/*
-          <Route path="partnerwithus" element={<PartnerWithUs />} />
-          <Route path="careers" element={<Careers />} />
-          <Route path="blogs" element={<Blogs />} /> */}
+            <Route path="partnerwithus" element={<PartnerWithUs />} />
+            <Route path="careers" element={<Careers />} />
+            <Route path="blogs" element={<Blogs />} />
           </Routes>
           <Footer />
         </div>

@@ -18,8 +18,10 @@ export default function HeroSec({
             <p> {description1}</p>
             <p> {description2}</p>
           </div>
+          <div className="herosec-right">
+            <img src={Img} alt="" className="herosec-img" />
+          </div>
         </div>
-        <img src={Img} alt="" className="herosec-img" />
       </div>
     </>
   );

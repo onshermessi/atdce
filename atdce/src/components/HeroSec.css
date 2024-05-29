@@ -14,13 +14,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+
 }
 
 .herosec-img {
     width: auto;
     height: 400px;
-    margin-left: 670px;
-    margin-top: -340px;
+
 }
 
 .herosec-left {
@@ -28,4 +29,13 @@
     width: 50%;
     margin-top: -20px;
     text-align: justify;
+    flex: 1;
+
+}
+
+.herosec-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:1;
 }
