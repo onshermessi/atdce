@@ -1,5 +1,5 @@
 import React from "react";
-import "./PartnerFunds.css";
+import "./Partners.css";
 import HeroSec from "../components/HeroSec.jsx";
 
 import bebbhar from "../assets/bab bhar 1@2x.png";
@@ -23,7 +23,7 @@ import pwu from "../assets/pwu.png";
 
 const images = [pr1, pr2, pr3];
 
-export default function PartnerFunds() {
+export default function Partners() {
   const HeroSecData = {
     title: "Partner With Us",
     subtitle: "Let's Make Wonders Together!",

@@ -4,7 +4,7 @@ header {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 117px;
+    height: 100px;
     top: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.8);
@@ -16,58 +16,63 @@ header {
 .nav-bar {
    display: flex;
    flex-direction: row;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
-   height: var(--header-height);
-     
+    height: 100px;
 }
 .containernav {
-    height: 96px;
+    position: relative;
+    height: 100px;
+    /*border-bottom: 3px solid #22211F;
+    border-radius: 2px;
+    border-bottom-width: 20%;*/
+}
+.nav-underline {
+    height: 3px;
+    background-color: #22211F;
+    border-radius: 3px;
+    width: 60%;
+    margin: 0 auto;
 }
 
-
 .navbar-logo {
-
     margin-right: 70px;
     padding-top: 30px;
     margin-bottom: 30px;
     width: 100px;
     margin-left: 50px;
-
-    
 }
 
 .mini-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 
 .mini-nav-link {
     overflow-wrap: break-word;
     font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 550;
+    font-size: 14px;
     text-transform: capitalize;
     color: #22211F;
     height: 20px;
     text-decoration: none;
     padding: 0 10px;
-    margin-bottom: 20px;
+
 }
 .nav-link {
     overflow-wrap: break-word;
     font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 15px;
     text-transform: capitalize;
     color: #22211F;
     height: 20px;
     text-decoration: none;
-    padding: 0 16px;
-    
+    padding: 0 14px;  
 }
 .resp{
     display: flex;
@@ -77,17 +82,14 @@ header {
     display: flex;
     flex-direction: column;
     row-gap: 2.5rem;
+    margin-bottom: 50px;
    }
 .nav-kbira {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    border-bottom: 3px solid #22211F;
-    border-radius: 2px;
-    border-width: 50%;
-    padding-bottom: 25px;
-    margin-top: 40px;
+    margin-top: 60px;
 }
     .nav__item {
         list-style: none;
@@ -120,6 +122,7 @@ header {
 
     .dropdown-item:hover {
         background-color: #ddd;
+        
     }
     .nav__item:hover {
         transform: scale(1.05);
@@ -173,4 +176,11 @@ header {
           flex-direction: row;
           column-gap: 2.5rem;
         }
+       }
+
+       .nav-link.active,
+       .mini-nav-link.active,
+       .dropdown-item.active {
+        color:red;
+        transition: color 0.2s ease;
        }

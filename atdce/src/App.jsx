@@ -12,7 +12,8 @@ import Project1 from "./pages/Project1.jsx";
 import Project2 from "./pages/Project2.jsx";
 import Project3 from "./pages/Project3.jsx";
 import ImpactArea from "./pages/ImpactArea.jsx";
-import PartnersFunds from "./pages/PartnerFunds.jsx";
+import Partners from "./pages/Partners.jsx";
+import Funds from "./pages/Funds.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import PartnerWithUs from "./pages/PartnerWithUs.jsx";
 import Careers from "./pages/Careers.jsx";
@@ -31,7 +32,8 @@ export default function App() {
             <Route path="project2" element={<Project2 />} />
             <Route path="project3" element={<Project3 />} />
             <Route path="impactareas" element={<ImpactArea />} />
-            <Route path="partnersandfunds" element={<PartnersFunds />} />
+            <Route path="partners" element={<Partners />} />
+            <Route path="funds" element={<Funds />} />
             <Route path="aboutus" element={<AboutUs />} />
             <Route path="partnerwithus" element={<PartnerWithUs />} />
             <Route path="careers" element={<Careers />} />

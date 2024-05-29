@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/atdce logo 1.png";
 
 import { IoClose, IoMenu } from "react-icons/io5";
@@ -33,9 +33,9 @@ export default function Navbar() {
       <div className="containernav">
         <nav className="nav-bar">
           <div className="navbar-logo">
-            <Link to="/">
+            <NavLink to="/">
               <img src={logo} alt="ATDCE LOGO" />
-            </Link>
+            </NavLink>
           </div>
 
           <div className={`nav__menu ${showMenu ? "show-menu" : ""}`}>
@@ -43,107 +43,116 @@ export default function Navbar() {
               <div className="resp">
                 <div className="nav-kbira">
                   <li className="nav__item">
-                    <Link
+                    <NavLink
                       to="/"
                       className="nav-link"
                       onClick={closeMenuOnMobile}
                     >
                       Home
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav__item">
-                    <Link
+                    <NavLink
                       to="/events"
                       className="nav-link"
                       onClick={closeMenuOnMobile}
                     >
                       Events
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav__item">
                     <div className="nav-link" onClick={toggleDropdown}>
                       Projects
                     </div>
                     <div className={`dropdown ${showDropdown ? "show" : ""}`}>
-                      <Link
+                      <NavLink
                         to="/project1"
                         className="dropdown-item"
                         onClick={closeMenuOnMobile}
                       >
                         Project1
-                      </Link>
-                      <Link
+                      </NavLink>
+                      <NavLink
                         to="/project2"
                         className="dropdown-item"
                         onClick={closeMenuOnMobile}
                       >
                         Project2
-                      </Link>
-                      <Link
+                      </NavLink>
+                      <NavLink
                         to="/project3"
                         className="dropdown-item"
                         onClick={closeMenuOnMobile}
                       >
                         Project3
-                      </Link>
+                      </NavLink>
                     </div>
                   </li>
                   <li className="nav__item">
-                    <Link
-                      to="/partnersandfunds"
+                    <NavLink
+                      to="/partners"
                       className="nav-link"
                       onClick={closeMenuOnMobile}
                     >
-                      Partners And Funds
-                    </Link>
+                      Partners
+                    </NavLink>
                   </li>
                   <li className="nav__item">
-                    <Link
+                    <NavLink
+                      to="/funds"
+                      className="nav-link"
+                      onClick={closeMenuOnMobile}
+                    >
+                      Funds
+                    </NavLink>
+                  </li>
+                  <li className="nav__item">
+                    <NavLink
                       to="/impactareas"
                       className="nav-link"
                       onClick={closeMenuOnMobile}
                     >
                       Impact Areas
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav__item">
-                    <Link
+                    <NavLink
                       to="/aboutus"
                       className="nav-link"
                       onClick={closeMenuOnMobile}
                     >
                       About Us
-                    </Link>
+                    </NavLink>
                   </li>
                 </div>
 
                 <div className="mini-nav">
                   <li className="nav__item">
-                    <Link
+                    <NavLink
                       to="/partnerwithus"
                       className="mini-nav-link"
                       onClick={closeMenuOnMobile}
                     >
                       Partner with Us
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav__item">
-                    <Link
+                    <NavLink
                       to="/careers"
                       className="mini-nav-link"
                       onClick={closeMenuOnMobile}
                     >
                       Careers
-                    </Link>
+                    </NavLink>
                   </li>
                   <li className="nav__item">
-                    <Link
+                    <NavLink
                       to="/blogs"
                       className="mini-nav-link"
                       onClick={closeMenuOnMobile}
                     >
                       Blogs
-                    </Link>
+                    </NavLink>
                   </li>
                 </div>
               </div>
@@ -157,6 +166,7 @@ export default function Navbar() {
             <IoMenu />
           </div>
         </nav>
+        <div className="nav-underline"></div>
       </div>
     </header>
   );
